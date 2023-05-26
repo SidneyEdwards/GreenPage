@@ -33,7 +33,7 @@ Book.init(
       type: DataTypes.STRING,
       allowNull: true, 
     },
-    cover_art: {
+    coverArtURL: {
       type: DataTypes.STRING,
       allowNull: true,
       defaultValue: 'https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg?20200913095930'
