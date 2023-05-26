@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const fetch = require("node-fetch");
 
-router.get('/', async (req, res) => {
+router.post('/', async (req, res) => {
   const type = req.query.type;
   const query = req.query.q;
   let searchQuery;
