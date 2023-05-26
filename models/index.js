@@ -1,5 +1,26 @@
 const User = require('./User');
+const Book = require('./Book');
+const Location = require('./Location');
 
-// Write Table relationships here
+User.hasMany(Book, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE',
+});
 
-module.exports = { User };
+Book.belongsTo(User, {
+  foreignKey: 'user_id',
+});
+
+Book.belongsTo(Location, {
+  foreignKey: 'location_id',
+});
+
+Location.hasMany(Book, {
+  foreignKey: 'location_id',
+});
+
+module.exports = {
+  User,
+  Book,
+  Location,
+};
