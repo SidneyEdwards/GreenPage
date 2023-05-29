@@ -1,7 +1,6 @@
 ![Books- Banner](https://github.com/SidneyEdwards/GreenPage/assets/124628764/56f4c1cb-7a44-48cb-b364-0cf9a805b591)
 
-
-![Book-Ends-Logo3](https://github.com/SidneyEdwards/GreenPage/assets/124628764/6e5efab6-c377-45b6-9313-65ca1966f29b)
+# Book Ends
 
 ## Description
 This website is designed to allow members of the neighborhood to search for available books in book-share boxes, such as the one below. 
