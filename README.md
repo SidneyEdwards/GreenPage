@@ -1,5 +1,3 @@
-![Books- Banner](https://github.com/SidneyEdwards/GreenPage/assets/124628764/56f4c1cb-7a44-48cb-b364-0cf9a805b591)
-
 # Book Ends
 
 ## Description
@@ -24,5 +22,3 @@ https://github.com/SidneyEdwards/GreenPage
 
 # Demo
 
-
-![Book-Banner2](https://github.com/SidneyEdwards/GreenPage/assets/124628764/9be3686b-58bc-4f56-8041-734f3cf0f01a)
