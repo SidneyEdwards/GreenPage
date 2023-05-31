@@ -6,10 +6,12 @@ router.post('/', async (req, res) => {
     const userData = await User.create(req.body);
 
     req.session.user_id = userData.id;
-    req.session.first_name = userData.first_name;
-    req.session.last_name = userData.last_name;
-    req.session.email = userData.email;
-    req.session.logged_in = true;
+    req.session.username = userData.username;
+
+    // req.session.first_name = userData.first_name;
+    // req.session.last_name = userData.last_name;
+    // req.session.email = userData.email;
+    // req.session.logged_in = true;
 
     res.status(200).json(userData);
   } catch (err) {
@@ -45,7 +47,6 @@ router.post('/login', async (req, res) => {
     req.session.logged_in = true;
 
     res.json({ user: userData, message: 'You are now logged in!' });
-
   } catch (err) {
     console.log(err);
     res.status(400).json(err);

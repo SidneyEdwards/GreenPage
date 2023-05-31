@@ -33,7 +33,7 @@ Book.init(
       type: DataTypes.STRING,
       allowNull: true, 
     },
-    coverArtURL: {
+    image: {
       type: DataTypes.STRING,
       allowNull: true,
       defaultValue: 'https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg?20200913095930'
@@ -41,6 +41,13 @@ Book.init(
     available: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
+    },
+    bookId: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      validate: {
+        notEmpty: true,
+      },
     },
     user_id: {
       type: DataTypes.INTEGER,

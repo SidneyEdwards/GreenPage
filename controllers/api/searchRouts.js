@@ -1,9 +1,10 @@
 const router = require('express').Router();
 const fetch = require("node-fetch");
 
-router.post('/', async (req, res) => {
+router.get('/', async (req, res) => {
   const type = req.query.type;
   const query = req.query.q;
+  console.log(req.query, '=========test=======')
   let searchQuery;
 
   switch (type) {
@@ -30,6 +31,7 @@ router.post('/', async (req, res) => {
       const books = data.items.map(item => {
         const book = item.volumeInfo;
 
+        const id = item.id ? item.id : "ID not available";
         const title = book.title ? book.title : "Title not available";
         const authors = book.authors
           ? book.authors.join(", ")
@@ -46,6 +48,7 @@ router.post('/', async (req, res) => {
             : "Image not available";
 
         return {
+          id: id,
           title: title,
           authors: authors,
           genre: genre,
@@ -63,7 +66,5 @@ router.post('/', async (req, res) => {
   }
   
 });
-
-
 
 module.exports = router;
