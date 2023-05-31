@@ -1,46 +1,76 @@
-<div class=''>
-  <div class=''>
-    <h2>Login</h2>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>BookEnds</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+    /* Add your custom styles here */
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #a5e69e;
+    margin: 0;
+    padding: 20px;
+    }
 
-    <form id='login-form'>
-      <div class=''>
-        <label for=''>email:</label>
-        <input class='' type='text' id='email-login' />
-      </div>
-      <div class=''>
-        <label for=''>password:</label>
-        <input class='' type='password' id='password-login' />
-      </div>
-      <div class=''>
-        <button class='' type='submit'>login</button>
-      </div>
-    </form>
-  </div>
-  <div class=''>
-    <h2>Signup</h2>
+    .login-card {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    }
 
-    <form id='signup-form'>
-      <div class=''>
-        <label for='name-signup'>first name:</label>
-        <input class='' type='text' id='first-name-signup' />
-      </div>
-      <div class=''>
-        <label for='name-signup'>last name:</label>
-        <input class='' type='text' id='last-name-signup' />
-      </div>
-      <div class=''>
-        <label for='email-signup'>email:</label>
-        <input class='' type='text' id='email-signup' />
-      </div>
-      <div class=''>
-        <label for='password-signup'>password:</label>
-        <input class='' type='password' id='password-signup' />
-      </div>
-      <div class=''>
-        <button class='' type='submit'>signup</button>
-      </div>
+    .login-title {
+    color: #333;
+    font-size: 24px;
+    margin-top: 0;
+    }
+
+    .login-form input {
+    margin-bottom: 10px;
+    }
+
+    .login-form .btn-login {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    width: 100%;
+    }
+
+    .login-form .btn-login:hover {
+    background-color: #0069d9;
+    }
+
+    .login-form .form-footer {
+    margin-top: 20px;
+    color: #777;
+    }
+</style>
+</head>
+<body>
+<div class="login-card">
+    <h1 class="login-title">BookEnds</h1>
+    <form class="login-form">
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" placeholder="Enter your username">
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter your password">
+    </div>
+    <button type="submit" class="btn btn-login">Log In</button>
+    <div class="form-footer">
+        Don't have an account? <a href="#">Sign Up</a>
+    </div>
     </form>
-  </div>
 </div>
 
-<script src='./js/login.js'></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
