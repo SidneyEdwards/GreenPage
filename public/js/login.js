@@ -105,6 +105,5 @@ const signupFormHandler = async (event) => {
 
 
 loginFormEl.addEventListener('submit', loginFormHandler);
-
-// signupFormEl.addEventListener('submit', signupFormHandler);
+signupFormEl.addEventListener('submit', signupFormHandler);
 

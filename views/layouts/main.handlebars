@@ -8,13 +8,13 @@
   </head>
 
   <body>
-    <div class=''>
+    <div id=''>
       <header class='nav-bar'>
         <h1>
           {{#if logged_in}}
-            <a href='/home'>Project 2</a>
+            <a href='/home'>BookEnds</a>
           {{else}}
-            <a href='/'>Project 2</a>
+            <a href='/'>BookEnds</a>
           {{/if}}
         </h1>
         <nav>
@@ -46,13 +46,20 @@
 
 <style>
     .nav-bar {
-    font-family: Arial, sans-serif;
-    background: url("/images/oogie.jpg");
+
+    background-color:rgba(10, 10, 10, 0.813);
     background-size: cover;
     width: 100%;
     height: 15%;
     margin: 0;
+    shadow
     }
+
+  #nav-bar{
+    font-family: Arial, sans-serif;
+    font-color:rgba(15, 80, 50, 0.813);
+  }
+
     </style>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
