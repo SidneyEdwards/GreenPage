@@ -8,10 +8,6 @@ router.post('/', async (req, res) => {
     req.session.user_id = userData.id;
     req.session.username = userData.username;
 
-    // req.session.first_name = userData.first_name;
-    // req.session.last_name = userData.last_name;
-    // req.session.email = userData.email;
-    // req.session.logged_in = true;
 
     res.status(200).json(userData);
   } catch (err) {

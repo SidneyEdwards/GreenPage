@@ -7,10 +7,154 @@
     <title>BookEnds</title>
   </head>
 
-  <body>
-    <div id=''>
-      <header class='nav-bar'>
-        <h1>
+
+
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  cursor: 
+  url(book-icon-50.jpg) 4 12, auto;
+}
+
+.title{
+    background: url("/images/minimal-books.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+.wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(-135deg, #295542, #58b560);
+  clip-path: circle(25px at calc(100% - 45px) 45px);
+  transition: all 0.3s ease-in-out;
+}
+#active:checked ~ .wrapper{
+  clip-path: circle(75%);
+}
+.menu-btn{
+  position: absolute;
+  z-index: 2;
+  right: 20px;
+  /* left: 20px; */
+  top: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+  background: linear-gradient(-135deg, #7ac850, #d0aa41);
+  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+  transition: all 0.3s ease-in-out;
+}
+#active:checked ~ .menu-btn{
+  background: #fff;
+  color: #60d041;
+}
+#active:checked ~ .menu-btn i:before{
+  content: "\f00d";
+}
+.wrapper ul{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+.wrapper ul li{
+  margin: 15px 0;
+}
+.wrapper ul li a{
+  color: none;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 5px 30px;
+  color: #fff;
+  position: relative;
+  line-height: 50px;
+  transition: all 0.3s ease;
+}
+.wrapper ul li a:after{
+  position: absolute;
+  content: "";
+  background: #fff;
+  width: 100%;
+  height: 50px;
+  left: 0;
+  border-radius: 50px;
+  transform: scaleY(0);
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+.wrapper ul li a:hover:after{
+  transform: scaleY(1);
+}
+.wrapper ul li a:hover{
+  color: #1c5d34;
+}
+input[type="checkbox"]{
+  display: none;
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  text-align: center;
+  width: 100%;
+  color: #202020;
+}
+.content .title{
+  font-size: 40px;
+  font-weight: 700;
+}
+.content p{
+  font-size: 35px;
+  font-weight: 600;
+}
+
+</style>
+
+    <!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Fullscreen Overlay Navigation | CodingNepal</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+   <body>
+      <input type="checkbox" id="active">
+      <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+      <div class="wrapper">
+<ul>
+
+            <li><a href="/login">Login or Sign Up</a></li>
+            <li><a href="#">View Available Books</a></li>
+            <li><a href="/profile">View My Books</a></li>
+            <li><a href="/home">Home</a></li>
+
+</ul>
+      </div>
+
+   </body>
+
+
+        {{!-- <h1>
           {{#if logged_in}}
             <a href='/home'>BookEnds</a>
           {{else}}
@@ -29,7 +173,7 @@
             <a href='/login'>Login or Sign-up</a>
           {{/if}}
         </nav>
-      </header>
+      </header> --}}
       <main class=''>
         <!-- Render the sub layout -->
         {{{body}}}
@@ -43,24 +187,7 @@
       <script src='/js/logout.js'></script>
     {{/if}}
   </body>
-
-<style>
-    .nav-bar {
-
-    background-color:rgba(10, 10, 10, 0.813);
-    background-size: cover;
-    width: 100%;
-    height: 15%;
-    margin: 0;
-    shadow
-    }
-
-  #nav-bar{
-    font-family: Arial, sans-serif;
-    font-color:rgba(15, 80, 50, 0.813);
-  }
-
-    </style>
+</html>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
