@@ -1,7 +1,6 @@
 const loginFormEl = document.querySelector('#login-form');
-const signupFormEl = document.querySelector('#signup-form');
-
-class login extends Model {}
+// const signupFormEl = document.querySelector('#signup-form');
+const loadingDivEl = document.querySelector("#loading-div");
 
 const showError = (parentEl, errorText) => {
   const errorPEl = document.createElement('p');
@@ -20,8 +19,8 @@ const loginFormHandler = async (event) => {
   event.preventDefault();
   removeAllErrors();
 
-  const email = document.querySelector('#email-login').value.trim();
-  const password = document.querySelector('#password-login').value.trim();
+  const email = document.querySelector('#username').value.trim();
+  const password = document.querySelector('#password').value.trim();
 
   if (!email || !password) {
     showError(loginFormEl, "Please provide both an email and password.")
@@ -34,6 +33,9 @@ const loginFormHandler = async (event) => {
   }
 
   try {
+
+    loadingDivEl.classList.remove('d-none');
+
     const response = await fetch('/api/users/login', {
       method: 'POST',
       body: JSON.stringify(bodyObj),
@@ -52,6 +54,8 @@ const loginFormHandler = async (event) => {
   } catch (err) {
     console.log(err);
     showError(loginFormEl, "A login error has ocurred.")
+  } finally {
+    loadingDivEl.classList.add('d-none');
   }
 };
 
@@ -102,8 +106,5 @@ const signupFormHandler = async (event) => {
 
 loginFormEl.addEventListener('submit', loginFormHandler);
 
-signupFormEl.addEventListener('submit', signupFormHandler);
-);
-
-module.exports = login;
+// signupFormEl.addEventListener('submit', signupFormHandler);
 
