@@ -1,6 +1,8 @@
 const loginFormEl = document.querySelector('#login-form');
 const signupFormEl = document.querySelector('#signup-form');
 
+class login extends Model {}
+
 const showError = (parentEl, errorText) => {
   const errorPEl = document.createElement('p');
   errorPEl.classList.add('error-element');
@@ -97,6 +99,11 @@ const signupFormHandler = async (event) => {
   }
 };
 
+
 loginFormEl.addEventListener('submit', loginFormHandler);
 
 signupFormEl.addEventListener('submit', signupFormHandler);
+);
+
+module.exports = login;
+
