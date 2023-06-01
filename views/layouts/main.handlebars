@@ -3,12 +3,13 @@
   <head>
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>Project 2</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>BookEnds</title>
   </head>
 
   <body>
     <div class=''>
-      <header class=''>
+      <header class='nav-bar'>
         <h1>
           {{#if logged_in}}
             <a href='/home'>Project 2</a>
@@ -43,5 +44,19 @@
     {{/if}}
   </body>
 
+<style>
+    .nav-bar {
+    font-family: Arial, sans-serif;
+    background: url("/images/oogie.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 15%;
+    margin: 0;
+    }
+    </style>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </html>
