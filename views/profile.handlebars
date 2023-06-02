@@ -1,0 +1,26 @@
+
+<section class="container">
+  <h3 class="location-name">{{address}}</h3>
+  <section class="flex-row justify-center">
+    {{#each address.books as |books|}}
+    <section class="card">
+      <a href="/book/{{id}}">
+        <header>{{title}}</header>
+
+        <div class="card-body">
+          <img src="/images/{{filename}}" alt="{{description}}">
+          <p>By: {{author}}</p>
+          <p>Genre:{{Genre}}</p>
+        </div>
+      </a>
+    </section>
+    {{/each}}
+  </section>
+</section>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

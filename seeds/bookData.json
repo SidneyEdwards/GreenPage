@@ -6,7 +6,8 @@
 		"genre": "Fiction",
 		"description": "Homer's epic chronicle of the Greek hero Odysseus' journey home from the Trojan War has inspired writers from Virgil to James Joyce. Odysseus survives storm and shipwreck, the cave of the Cyclops and the isle of Circe, the lure of the Sirens' song and a trip to the Underworld, only to find his most difficult challenge at home, where treacherous suitors seek to steal his kingdom and his loyal wife, Penelope. Favorite of the gods, Odysseus embodies the energy, intellect, and resourcefulness that were of highest value to the ancients and that remain ideals in out time. In this new verse translation, Allen Mandelbaum--celebrated poet and translator of Virgil's Aeneid and Dante's Divine Comedy --realizes the power and beauty of the original Greek verse and demonstrates why the epic tale of The Odyssey has captured the human imagination for nearly three thousand years.",
 		"image": "http://books.google.com/books/content?id=ORyo8qAA-CQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-    "available": true
+    	"available": true,
+		"user_id": 1
 	},
 	{
 		"bookId": "KVGd-NabpW0C",
