@@ -19,16 +19,16 @@ const loginFormHandler = async (event) => {
   event.preventDefault();
   removeAllErrors();
 
-  const email = document.querySelector('#username').value.trim();
+  const username = document.querySelector('#username').value.trim();
   const password = document.querySelector('#password').value.trim();
 
-  if (!email || !password) {
-    showError(loginFormEl, "Please provide both an email and password.")
+  if (!username || !password) {
+    showError(loginFormEl, "Please provide both an username and password.")
     return;
   }
 
   const bodyObj = {
-    email,
+    username,
     password
   }
 
@@ -59,51 +59,51 @@ const loginFormHandler = async (event) => {
   }
 };
 
-const signupFormHandler = async (event) => {
-  event.preventDefault();
-  removeAllErrors();
+// const signupFormHandler = async (event) => {
+//   event.preventDefault();
+//   removeAllErrors();
 
-  const first_name = document.querySelector('#first-name-signup').value.trim();
-  const last_name = document.querySelector('#last-name-signup').value.trim();
-  const email = document.querySelector('#email-signup').value.trim();
-  const password = document.querySelector('#password-signup').value.trim();
+//   const first_name = document.querySelector('#first-name-signup').value.trim();
+//   const last_name = document.querySelector('#last-name-signup').value.trim();
+//   const email = document.querySelector('#email-signup').value.trim();
+//   const password = document.querySelector('#password-signup').value.trim();
 
-  const bodyObj = {
-    first_name,
-    last_name,
-    email,
-    password
-  }
+//   const bodyObj = {
+//     first_name,
+//     last_name,
+//     email,
+//     password
+//   }
 
-  if (!first_name || !last_name || !email || !password) {
-    console.log(bodyObj)
-    showError(signupFormEl, 'Please fill out all fields.');
-    return;
-  }
+//   if (!first_name || !last_name || !email || !password) {
+//     console.log(bodyObj)
+//     showError(signupFormEl, 'Please fill out all fields.');
+//     return;
+//   }
 
-  try {
-    const response = await fetch('/api/users', {
-      method: 'POST',
-      body: JSON.stringify(bodyObj),
-      headers: { 'Content-Type': 'application/json' },
-    });
+//   try {
+//     const response = await fetch('/api/users', {
+//       method: 'POST',
+//       body: JSON.stringify(bodyObj),
+//       headers: { 'Content-Type': 'application/json' },
+//     });
 
-    if (!response.ok) {
-      const res = await response.json();
-      console.log(res);
-      const errorMsg = res.errors[0].message;
-      showError(signupFormEl, errorMsg);
-      return;
-    }
+//     if (!response.ok) {
+//       const res = await response.json();
+//       console.log(res);
+//       const errorMsg = res.errors[0].message;
+//       showError(signupFormEl, errorMsg);
+//       return;
+//     }
 
-    document.location.replace('/home');
-  } catch (err) {
-    console.log(err);
-    showError(signupFormEl, "A signup error has ocurred.");
-  }
-};
+//     document.location.replace('/home');
+//   } catch (err) {
+//     console.log(err);
+//     showError(signupFormEl, "A signup error has ocurred.");
+//   }
+// };
 
 
 loginFormEl.addEventListener('submit', loginFormHandler);
-signupFormEl.addEventListener('submit', signupFormHandler);
+// signupFormEl.addEventListener('submit', signupFormHandler);
 
