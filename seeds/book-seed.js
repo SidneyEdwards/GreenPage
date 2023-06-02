@@ -10,6 +10,7 @@ const bookData = [
     image:
       'http://books.google.com/books/content?id=ORyo8qAA-CQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
     available: true,
+    user_id: 1
   },
   {
     title: 'The Plague',
@@ -20,6 +21,7 @@ const bookData = [
     image:
       'http://books.google.com/books/content?id=KVGd-NabpW0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
     available: false,
+    user_id: 1
   },
   // {
   //   title: 'Ready Player Two',
