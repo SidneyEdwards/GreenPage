@@ -50,6 +50,7 @@ const loginFormHandler = async (event) => {
       return;
     }
 
+    //document.location.replace('/profile');
     document.location.replace('/home');
   } catch (err) {
     console.log(err);
