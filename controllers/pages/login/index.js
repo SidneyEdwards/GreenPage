@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
     console.log("User is already logged-in.")
   }
 
-  res.render('login');
+  res.render('profile');
 });
 
 
