@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
 
     console.log(userData);
 
-    res.render('userlibrarys', {
+    res.render('profile', {
       ...userData,
       books,
       logged_in: true
