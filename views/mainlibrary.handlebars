@@ -2,10 +2,26 @@
 {{> loading}}
 </dev>
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Available Books In Your Neighborhood</title>
+</head>
+<body>
+    <h1>Hi Neighbor!</h1>
 
-<dev>
-<!-- For each library, the 'library-details' partial is used to render the library data -->
-{{#each library as |library|}}
-{{> library-details}}
-{{/each}}
-</dev>
+    <h2>Available Books In Our Neighborhood</h2>
+    <section class="card">
+    <ul>
+        {{#each book}}
+        <a href="/book/{{id}}"></a>
+        {{/each}}
+    </ul>
+</section>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -4,7 +4,7 @@ router.get('/', async (req, res) => {
   try {
 
 
-    res.render('home', {
+    res.render('/profile', {
       logged_in: true
     });
   } catch (err) {
