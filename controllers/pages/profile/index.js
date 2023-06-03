@@ -14,8 +14,12 @@ router.get('/', async (req, res) => {
       raw: true,
       nest: true,
     });
+    // res.render('profile', {
+    // //console.log(userData);
+    // ...userData,
 
-    console.log(userData);
+    // logged_in: true
+    // })
 
     res.render('profile', {
       ...userData,
@@ -26,6 +30,7 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 
 
 module.exports = router;
