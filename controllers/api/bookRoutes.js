@@ -89,6 +89,23 @@ router.put('/:id', async (req, res) => {
   }
 });
 
+router.post('/api/books', async (req, res) => {
+  try {
+    const newBook = await Book.create({
+      title: req.body.title,
+      author: req.body.author,
+      description: req.body.description,
+      genre: req.body.genre,
+      available: true,  
+    });
+
+    res.json({ success: true });
+  } catch (err) {
+    res.status(500).json({ success: false });
+  }
+});
+
+
 router.delete('/:id', async (req, res) => {
   try {
     const bookData = await Book.destroy({

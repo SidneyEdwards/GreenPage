@@ -25,7 +25,7 @@
 		"genre": "Fiction",
 		"description": "#1 NEW YORK TIMES BESTSELLER • The thrilling sequel to the beloved worldwide bestseller Ready Player One, the near-future adventure that inspired the blockbuster Steven Spielberg film. NAMED ONE OF THE BEST BOOKS OF THE YEAR BY THE WASHINGTON POST • “The game is on again. . . . A great mix of exciting fantasy and threatening fact.”—The Wall Street Journal AN UNEXPECTED QUEST. TWO WORLDS AT STAKE. ARE YOU READY? Days after winning OASIS founder James Halliday’s contest, Wade Watts makes a discovery that changes everything. Hidden within Halliday’s vaults, waiting for his heir to find, lies a technological advancement that will once again change the world and make the OASIS a thousand times more wondrous—and addictive—than even Wade dreamed possible. With it comes a new riddle, and a new quest—a last Easter egg from Halliday, hinting at a mysterious prize. And an unexpected, impossibly powerful, and dangerous new rival awaits, one who’ll kill millions to get what he wants. Wade’s life and the future of the OASIS are again at stake, but this time the fate of humanity also hangs in the balance. Lovingly nostalgic and wildly original as only Ernest Cline could conceive it, Ready Player Two takes us on another imaginative, fun, action-packed adventure through his beloved virtual universe, and jolts us thrillingly into the future once again.",
 		"image": "http://books.google.com/books/content?id=FOHtDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-    "available": false
+    "available": true
 	},
 	{
 		"bookId": "oNY0DwAAQBAJ",
@@ -43,7 +43,7 @@
 		"genre": "Fiction",
 		"description": "The Trueba family embodies strong feelings. This family saga starts at the beginning of the 20th century and continues through the assassination of Allende in 1973.",
 		"image": "http://books.google.com/books/content?id=IMwoCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-    "available": false
+    "available": true
 	},
 	{
 		"bookId": "lclWAAAAQBAJ",
@@ -61,7 +61,7 @@
 		"genre": "Fiction",
 		"description": "From the New York Times bestselling author of The Midnight Library. “A quirky romcom dusted with philosophical observations….A delightfully witty…poignant novel.” —The Washington Post “She smiled a soft, troubled smile and I felt the whole world slipping away, and I wanted to slip with it, to go wherever she was going… I had existed whole years without her, but that was all it had been. An existence. A book with no words.” Tom Hazard has just moved back to London, his old home, to settle down and become a high school history teacher. And on his first day at school, he meets a captivating French teacher at his school who seems fascinated by him. But Tom has a dangerous secret. He may look like an ordinary 41-year-old, but owing to a rare condition, he's been alive for centuries. Tom has lived history--performing with Shakespeare, exploring the high seas with Captain Cook, and sharing cocktails with Fitzgerald. Now, he just wants an ordinary life. Unfortunately for Tom, the Albatross Society, the secretive group which protects people like Tom, has one rule: Never fall in love. As painful memories of his past and the erratic behavior of the Society's watchful leader threaten to derail his new life and romance, the one thing he can't have just happens to be the one thing that might save him. Tom will have to decide once and for all whether to remain stuck in the past, or finally begin living in the present. How to Stop Time tells a love story across the ages—and for the ages—about a man lost in time, the woman who could save him, and the lifetimes it can take to learn how to live. It is a bighearted, wildly original novel about losing and finding yourself, the inevitability of change, and how with enough time to learn, we just might find happiness. Soon to be a major motion picture starring Benedict Cumberbatch.",
 		"image": "http://books.google.com/books/content?id=In8mDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-    "available": false
+    "available": true
 	},
 	{
 		"bookId": "kYcUeOR4bdoC",
@@ -70,7 +70,7 @@
 		"genre": "Fiction",
 		"description": "NATIONAL BESTSELLER • In this modern classic from the National Book Award–nominated author of The Chosen, a young religious artist is compulsively driven to render the world he sees and feels, even when it leads him to blasphemy. “A novel of finely articulated tragic power .... Little short of a work of genius.”—The New York Times Book Review Asher Lev is a Ladover Hasid who keeps kosher, prays three times a day and believes in the Ribbono Shel Olom, the Master of the Universe. He grows up in a cloistered Hasidic community in postwar Brooklyn, a world suffused by ritual and revolving around a charismatic Rebbe. He is torn between two identities, the one consecrated to God, the other devoted only to art and his imagination, and in time, his artistic gift threatens to estrange him from that world and the parents he adores. As it follows his struggle, My Name Is Asher Lev becomes a luminous, visionary portrait of the artist, by turns heartbreaking and exultant.",
 		"image": "http://books.google.com/books/content?id=kYcUeOR4bdoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-    "available": false
+    "available": true
 	},
 	{
 		"bookId": "TayGZxfYF_EC",
@@ -88,6 +88,6 @@
 		"genre": "Fiction",
 		"description": "The story of the mysterious indictment, trial, and reckoning forced upon Joseph K. in Franz Kafka’s The Trial is one of the twentieth century’s master parables, reflecting the central spiritual crises of modern life. Kafka’s method–one that has influenced, in some way, almost every writer of substance who followed him–was to render the absurd and the terrifying convincing by a scrupulous, hyperreal matter-of-factness of tone and treatment. He thereby imparted to his work a level of seriousness normally associated with civilization’s most cherished poems and religious texts. Translated by Willa and Edwin Muir",
 		"image": "http://books.google.com/books/content?id=8T9_cxH7z6sC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-    "available": false
+    "available": true
 	}
 ]
