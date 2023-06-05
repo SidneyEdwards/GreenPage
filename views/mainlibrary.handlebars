@@ -9,7 +9,16 @@
     <title>Available Books In Your Neighborhood</title>
 </head>
 <body>
-    <h1>Hi Neighbor!</h1>
+    <h1>Hi Neighbor! Add books to the Library!</h1>
+    <form id="searchForm">
+  <select id="searchType">
+    <option value="title">Title</option>
+    <option value="author">Author</option>
+  </select>
+  <input type="text" id="searchInput" placeholder="Search for a book..." />
+  <button type="submit">Search</button>
+</form>
+<div id="booksContainer"></div>
 
     <h2>Available Books In Our Neighborhood</h2>
     <section class="card">
@@ -35,11 +44,16 @@
 
 </ul>
 
-<form id="searchForm">
+{{!-- <form id="searchForm">
+  <select id="searchType">
+    <option value="title">Title</option>
+    <option value="author">Author</option>
+  </select>
   <input type="text" id="searchInput" placeholder="Search for a book..." />
   <button type="submit">Search</button>
 </form>
-<div id="booksContainer"></div>
+<div id="booksContainer"></div> --}}
+
 
 
 </section>
@@ -48,7 +62,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="/js/addToLibrary.js"></script>
-  <script src="/js/searchBooks.js.js"></script>
+  <script src="/js/searchBooks.js"></script>
 
 </body>
 
