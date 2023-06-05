@@ -8,19 +8,33 @@
 
     <h2>Your Library</h2>
     <section class="card">
-    <ul>
-        {{#each user.library}}
-              <a href="/book/{{id}}"></a>
-            <li>{{this.title}} by {{this.author}}</li>
-            <li>{{this.genre}}</li>
-            <li>{{this.discription}}</li>
-        {{/each}}
-    </ul>
+  <ul>
+  <div class="row">
+    {{#each books}}
+        <div class="col-sm-4"> 
+            <div class="card" style="width: 18rem;">
+                {{#if image}}
+                    <img src="{{image}}" class="card-img-top" alt="...">
+                {{/if}}
+                <div class="card-body">
+                    <h5 class="card-title">{{title}}</h5>
+                    <p class="card-text">Author: {{authors}}</p>
+                    <p class="card-text">Genre: {{genre}}</p>
+                    <p class="card-text">{{description}}</p>
+                   <button class="btn btn-primary return-book" data-book-id="{{id}}">Return Book</button>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</div>
+
+</ul>
 </section>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/js/profile.js"></script>
 </body>
 
 </html>

@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <title>Available Books In Your Neighborhood</title>
 </head>
 <body>
@@ -12,16 +13,43 @@
 
     <h2>Available Books In Our Neighborhood</h2>
     <section class="card">
-    <ul>
-        {{#each book}}
-        <a href="/book/{{id}}"></a>
-        {{/each}}
-    </ul>
+ <ul>
+  <div class="row">
+    {{#each books}}
+        <div class="col-sm-4"> 
+            <div id="book-{{id}}" class="card" style="width: 18rem;">
+                {{#if image}}
+                    <img src="{{image}}" class="card-img-top" alt="...">
+                {{/if}}
+                <div class="card-body">
+                    <h5 class="card-title">{{title}}</h5>
+                    <p class="card-text">Author: {{authors}}</p>
+                    <p class="card-text">Genre: {{genre}}</p>
+                    <p class="card-text">{{description}}</p>
+                    <button class="btn btn-primary add-to-library" data-book-id="{{id}}">Add to Library</button>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</div>
+
+</ul>
+
+<form id="searchForm">
+  <input type="text" id="searchInput" placeholder="Search for a book..." />
+  <button type="submit">Search</button>
+</form>
+<div id="booksContainer"></div>
+
+
 </section>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="/js/addToLibrary.js"></script>
+  <script src="/js/searchBooks.js.js"></script>
+
 </body>
 
 </html>

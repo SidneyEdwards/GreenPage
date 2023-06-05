@@ -4,6 +4,9 @@ const { Book, Location, User } = require('../../models')
 router.get('/', async (req, res) => {
   try {
     const bookData = await Book.findAll({
+      where: {
+        available: true
+      },
       include: [
         // {model: Location},
         {model: User}

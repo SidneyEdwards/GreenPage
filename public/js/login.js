@@ -48,6 +48,7 @@ const loginFormHandler = async (event) => {
       const errorMsg = res.message;
       showError(loginFormEl, errorMsg);
       return;
+    }
     document.location.replace('/profile');
 
   } catch (err) {

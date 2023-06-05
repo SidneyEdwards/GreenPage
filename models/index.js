@@ -9,6 +9,7 @@ User.hasMany(Book, {
 
 Book.belongsTo(User, {
   foreignKey: 'user_id',
+  onDelete: 'CASCADE',
 });
 
 Book.belongsTo(Location, {
