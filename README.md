@@ -6,7 +6,7 @@ This website is designed to allow members of the neighborhood to search for avai
 ![littlelibrary2](https://github.com/SidneyEdwards/GreenPage/assets/124628764/db73a14f-ba2b-43d8-bda2-8d8b477241e1)
 
 ## Credits
-Long Yang (Tojicodes), Sidney Edwards (SidneyEdwards), Garrett McDaniel (ActivePatience), Daniel Mascali(TurboTeam335)- With the gracious help of Caleb Crum.
+Long Yang (Tojicodes), Sidney Edwards (SidneyEdwards), David McDaniel (ActivePatience), Daniel Mascali(TurboTeam335)- With the gracious help of Caleb Crum.
 
 ## Features
 API Github, Bootstrap CSS, Unsplash.com
