@@ -30,7 +30,7 @@ router.get('/', async (req, res) => {
     if (data.items && data.items.length > 0) {
       const books = data.items.map(item => {
         const book = item.volumeInfo;
-
+    
         const id = item.id ? item.id : "ID not available";
         const title = book.title ? book.title : "Title not available";
         const authors = book.authors
@@ -46,7 +46,7 @@ router.get('/', async (req, res) => {
           book.imageLinks && book.imageLinks.thumbnail
             ? book.imageLinks.thumbnail
             : "Image not available";
-
+    
         return {
           id: id,
           title: title,
@@ -56,15 +56,14 @@ router.get('/', async (req, res) => {
           image: image,
         };
       });
-
-      res.json(books);
+    
+      res.json({ books });
     } else {
-      res.json({ message: "No books found" });
+      res.json({ books: [], message: "No books found" });
     }
   } catch (error) {
     res.json({ error: error.toString() });
   }
-  
 });
 
 module.exports = router;
