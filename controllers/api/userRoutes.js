@@ -30,15 +30,13 @@ router.post('/library/:id', async (req, res) => {
     }
 
     bookData.available = false;
+    bookData.user_id = req.session.user_id;
     await bookData.save();
 
-    const user = await User.findByPk(req.session.user_id);
-    await user.addBook(bookData);
-
-    res.status(200).json({ message: 'Book added to library successfully.' });
+    res.status(200).json({ success: true, message: 'Book added to library successfully.' });
   } catch (err) {
     console.log(err);
-    res.status(500).json({ error: err.toString() });
+    res.status(500).json({ success: false, error: err.toString() });
   }
 });
 
@@ -50,11 +48,8 @@ router.post('/library/:id/return', async (req, res) => {
       return;
     }
 
-    const user = await User.findByPk(req.session.user_id);
-
-    await user.removeBook(bookData);
-
     bookData.available = true;
+    bookData.user_id = null;
     await bookData.save();
 
     res.status(200).json({ message: 'Book returned successfully.' });
@@ -64,10 +59,21 @@ router.post('/library/:id/return', async (req, res) => {
   }
 });
 
+
 router.get('/home', async (req, res) => {
-  const books = await Book.findAll({ where: { available: true } });
-  res.render('home', { books });
+  try {
+    const bookData = await Book.findAll({
+      where: { available: true },
+    });
+
+    res.render('home', {
+      books: bookData.map((book) => book.get({ plain: true })),
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
+
 
 router.get('/profile', async (req, res) => {
   try {

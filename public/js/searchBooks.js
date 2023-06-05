@@ -72,7 +72,7 @@ function searchBooks() {
 }
 
 function addBookToLibrary(book) {
-  fetch('/api/books', {
+  fetch('/api/book', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -89,15 +89,11 @@ function addBookToLibrary(book) {
       return response.json();
     })
     .then((data) => {
-      if (data.success) {
-        alert(`Book: "${book.title}" added to library!`);
-      } else {
-        alert('Failed to add book to library');
-      }
+      location.reload()
     })
     .catch((error) => {
       console.error('Error:', error);
-      alert('Failed to add book to library');
+      // alert('Failed to add book to library');
     });
 }
 
