@@ -145,37 +145,17 @@ input[type="checkbox"]{
 
             <li><a href="/login">Login or Sign Up</a></li>
             <li><a href="/home">View Available Books</a></li>
+            <li><a href="/add">Add Books to the Library</a></li>
             <li><a href="/profile">View My Books</a></li>
             <li><a href="/">Home</a></li>
 
 </ul>
       </div>
 
-   </body>
+</body>
 
-
-        {{!-- <h1>
-          {{#if logged_in}}
-            <a href='/home'>BookEnds</a>
-          {{else}}
-            <a href='/'>BookEnds</a>
-          {{/if}}
-        </h1>
-        <nav>
-          <!-- Conditionally render login or logout links -->
-          {{#if logged_in}}
-            <a href='/home'>home</a>
-
-            <a href='/profile'>profile</a>
-
-            <button class='' id='logout'>logout</button>
-          {{else}}
-            <a href='/login'>Login or Sign-up</a>
-          {{/if}}
-        </nav>
-      </header> --}}
       <main class=''>
-        <!-- Render the sub layout -->
+
         {{{body}}}
       </main>
       <footer>
