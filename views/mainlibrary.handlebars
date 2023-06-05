@@ -1,15 +1,54 @@
-<dev>
+{{!-- <dev>
 {{> loading}}
-</dev>
+</dev> --}}
+
+<style>
+.library {
+
+}
+
+.body{
+
+}
+
+  <style>
+    .card-container {
+      perspective: 1000px;
+    }
+
+    .card-container .card {
+      transition: transform 0.5s;
+      transform-style: preserve-3d;
+    }
+
+    .card-container:hover .card {
+      transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
+      backface-visibility: hidden;
+    }
+
+    .card-back {
+      transform: rotateY(180deg);
+    }
+  </style>
+</style>
+
+
 
 <!DOCTYPE html>
 <html>
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <title>Available Books In Your Neighborhood</title>
+    <title>Available Books In Your Neighborhood: </title>
 </head>
 <body>
-    <h1>Hi Neighbor! Add books to the Library!</h1>
+    <h1>Howdy Neighbor! <h1>
+      
+    <h2>Add your books to the Library:</h2>
+    <form class="library">
     <form id="searchForm">
   <select id="searchType">
     <option value="title">Title</option>
@@ -23,19 +62,28 @@
     <h2>Available Books In Our Neighborhood</h2>
     <section class="card">
  <ul>
-  <div class="row">
+  <div class="container">
     {{#each books}}
         <div class="col-sm-4"> 
-            <div id="book-{{id}}" class="card" style="width: 18rem;">
+          <div class="card-container">
+            <div id="book-{{id}}" class="card" style="width:auto;">
                 {{#if image}}
                     <img src="{{image}}" class="card-img-top" alt="...">
                 {{/if}}
-                <div class="card-body">
+                <div class="card-front">
+                   <div class="card-body">
                     <h5 class="card-title">{{title}}</h5>
                     <p class="card-text">Author: {{authors}}</p>
                     <p class="card-text">Genre: {{genre}}</p>
+                    </div>
+                    </div>
+                    <div class="card-back">
+                       <div class="card-body"></div>
                     <p class="card-text">{{description}}</p>
+                    </div>
+                    </div>
                     <button class="btn btn-primary add-to-library" data-book-id="{{id}}">Add to Library</button>
+                </div>
                 </div>
             </div>
         </div>
@@ -43,17 +91,6 @@
 </div>
 
 </ul>
-
-{{!-- <form id="searchForm">
-  <select id="searchType">
-    <option value="title">Title</option>
-    <option value="author">Author</option>
-  </select>
-  <input type="text" id="searchInput" placeholder="Search for a book..." />
-  <button type="submit">Search</button>
-</form>
-<div id="booksContainer"></div> --}}
-
 
 
 </section>
