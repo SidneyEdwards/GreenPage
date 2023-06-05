@@ -41,6 +41,7 @@ Book.init(
     available: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
+      defaultValue: true,
     },
     bookId: {
       type: DataTypes.STRING,

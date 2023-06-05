@@ -40,7 +40,12 @@ document.querySelectorAll('.add-to-library').forEach((button) => {
         throw await response.json();
       }
 
-      document.getElementById(`book-${bookId}`).remove();
+      const responseData = await response.json();
+      if (responseData.success) {
+        document.getElementById(`book-${bookId}`).remove();
+      } else {
+        console.error('Error adding book to library:', responseData.error);
+      }
     } catch (error) {
       console.error(error);
     }
@@ -65,7 +70,7 @@ document.querySelector("#searchForm").addEventListener("submit", function(e) {
 
         $.ajax({
           method: "POST",
-          url: "/api/books",
+          url: "/api/book",
           data: {
             title: book.title,
             author: book.authors ? book.authors.join(", ") : "", 
