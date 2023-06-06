@@ -8,7 +8,6 @@ router.get('/', async (req, res) => {
         available: true
       },
       include: [
-        // {model: Location},
         {model: User}
       ],
     });
