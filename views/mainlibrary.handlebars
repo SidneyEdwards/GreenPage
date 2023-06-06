@@ -4,95 +4,50 @@
 
 <!DOCTYPE html>
 <html>
-<style>
-.cards{
-  display:grid;
-}
-.card {
-
-  perspective: 40rem;
-}
-.card-body{
-  display: flex;
-  transform-style: preserve-3d;
-  transition: var(--time) transform;
-}
-    .card-container {
-      perspective: 1000px;
-      display: flex;
-      transform-style: preserve-3d;
-    }
-
-    .card-container .card {
-      transition: transform 0.5s;
-      transform-style: preserve-3d;
-      perspective: 40rem;
-    }
-
-    .card-container:hover .card {
-      transform: rotateY(180deg);
-    }
-
-    .card-front,
-    .card-back {
-      backface-visibility: hidden;
-      min-width:100%;
-    }
-
-    .card-back {
-      transform: rotateY(180deg) 
-
-    }
-
-</style>
-
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <title>Available Books In Our Neighborhood </title>
+    <title>Available Books In Your Neighborhood</title>
 </head>
 <body>
-    <h1>Hello Neighbor <h1>
-
+    <h1>Hi Neighbor!</h1>
 
     <h2>Available Books In Our Neighborhood:</h2>
-    <div class="container">
-    <section class="card-group">
-    <div class="row">
+    <section class="card">
+ <ul>
+  <div class="row">
     {{#each books}}
-        <div class="row row-cols-1 row-cols-md-4 g-4"> 
-          <div class="card-container">
-            <div class="card h-100">
-                <div class="card-front">
-                  <div class="card body">
-                    <h5 class="card-title">{{title}}</h5>
-                    <div id="book-{{id}}" class="card" style="width:auto;">
+        <div class="col-sm-4"> 
+            <div id="book-{{id}}" class="card" style="width: 18rem;">
                 {{#if image}}
-                    <img src="{{image}}" class="img-fluid rounded-start" alt="image of book-cover">
+                    <img src="{{image}}" class="card-img-top" alt="...">
                 {{/if}}
-                    <p class="card-text">Author: {{author}}</p>
+                <div class="card-body">
+                    <h5 class="card-title">{{title}}</h5>
+                    <p class="card-text">Author: {{authors}}</p>
                     <p class="card-text">Genre: {{genre}}</p>
-                    </div>
-                    </div>
-                    </div>
-                    <div class="card-back">
-                    <h5 class="card-title">{{title}}</h5> 
-                    <div class="card body">
-                    <div id="book-{{id}}" class="card" style="width:auto;">
-
-                    <img src="{{image}}" class="img-fluid rounded-start" alt="image of book-cover">
-
-                    <button class="btn btn-primary add-to-library" data-book-id="{{id}}">Add to Library</button>
                     <p class="card-text">{{description}}</p>
-                    </div>
-                    </div>
-                    </div>
+                    <button class="btn btn-primary add-to-library" data-book-id="{{id}}">Add to Library</button>
                 </div>
-                </div>
-                </div>
-</div>
+            </div>
+        </div>
     {{/each}}
+</div>
+
+</ul>
+
+{{!-- <form id="searchForm">
+  <select id="searchType">
+    <option value="title">Title</option>
+    <option value="author">Author</option>
+  </select>
+  <input type="text" id="searchInput" placeholder="Search for a book..." />
+  <button type="submit">Search</button>
+</form>
+<div id="booksContainer"></div> --}}
 
 
+
+</section>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
@@ -101,6 +56,5 @@
   <script src="/js/searchBooks.js"></script>
 
 </body>
-</section>
 
 </html>
