@@ -1,4 +1,4 @@
-# Book Ends
+# BookEnds
 
 ## Description
 This website is designed to allow members of the neighborhood to search for available books in book-share boxes, such as the one below. 
@@ -9,7 +9,7 @@ This website is designed to allow members of the neighborhood to search for avai
 Long Yang (Tojicodes), Sidney Edwards (SidneyEdwards), David McDaniel (ActivePatience), Daniel Mascali(TurboTeam335)- With the gracious help of Caleb Crum.
 
 ## Features
-API Github, Bootstrap CSS, Unsplash.com
+Google Books API, Github, Bootstrap, Unsplash.com
 
 
 ## Deployed
