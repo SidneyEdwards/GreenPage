@@ -1,15 +1,30 @@
+<style>
+h1{
+    margin-top:5%;
+    background-image: url("/images/foliage.3.33.jpg");
+}
+
+h2{
+    margin-top: 2%;
+    margin-bottom: 22%;
+}
+</style>
+
+
 <!DOCTYPE html>
+
+
 <html>
 <head>
-    <title>Your Library</title>
-</head>
-<body>
     <h1>Welcome Back!</h1>
 
     <h2>Your Library</h2>
+</head>
+
+<body class="body">
+
     <section class="card">
   <ul>
-  <div class="row">
     {{#each books}}
         <div class="col-sm-4"> 
             <div class="card" style="width: 18rem;">
@@ -21,9 +36,8 @@
                     <p class="card-text">Author: {{authors}}</p>
                     <p class="card-text">Genre: {{genre}}</p>
                     <p class="card-text">{{description}}</p>
-                   <button class="btn btn-primary return-book" data-book-id="{{id}}">Return Book</button>
+                <button class="btn btn-primary return-book" data-book-id="{{id}}">Return Book</button>
                 </div>
-            </div>
         </div>
     {{/each}}
 </div>
