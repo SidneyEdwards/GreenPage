@@ -1,54 +1,47 @@
-{{!-- <dev>
-{{> loading}}
-</dev> --}}
+
 <style>
-.body{
-  background: url("./images/foliage3.33.jpg");
+  .body{
+justify-content: center;
 }
-.column{
+.col{
   display: flex;
   justify-content: center;
   max-height: 8%;
-width:100%
+  width:100%
 }
 .btn{
 background-color: rgb(19, 98, 19);
 }
 
-.row{
-padding:5%;
-}
 
 </style>
 
 <body class="body">
     <h2>Available Books In Our Neighborhood:</h2>
-    <section class="card mb-3" style="max-width: 540px;">
-    <ul>
-      <div class="row g-0">
-      {{#each books}}
-        <div class="column"> 
-            <div id="book-{{id}}" class="card" style="width: 18rem;">
-                {{#if image}}
-                    <img src="{{image}}" class="img-fluid rounded-start" alt="book image">
-    
-                {{/if}}
-                </div>
-                <div class="col-lg-8">
-                <div class="card-body">
-                    <h5 class="card-title">{{title}}</h5>
-                    <p class="card-text">Author: {{authors}}</p>
-                    <p class="card-text">Genre: {{genre}}</p>
-                    <p class="card-text">{{description}}</p>
-                    <button class="btn btn-primary add-to-library" data-book-id="{{id}}">Add to Library</button>
-                </div>
+    <section class="card mb-3" style="max-width: 100vw;">
+    {{!-- <ul> --}}
+      <div>
+        {{#each books}}
+          <div class="col"> 
+            <div id="book-{{id}}" class="card" style="width: 10rem;">
+              {{#if image}}
+                <img src="{{image}}" class="img-fluid rounded-start" alt="book image">
+              {{/if}}
             </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{title}}</h5>
+                <p class="card-text">Author: {{authors}}</p>
+                <p class="card-text">Genre: {{genre}}</p>
+                <p class="card-text">{{description}}</p>
+                <button class="btn btn-primary add-to-library" data-book-id="{{id}}">Add to Library</button>
+              </div>
             </div>
-        </div>
-    {{/each}}
+          </div>
+        {{/each}}
 </div>
 
-</ul>
+{{!-- </ul> --}}
 
 </section>
 </body>
