@@ -8,6 +8,7 @@ router.get('/', async (req, res) => {
         available: true
       },
       include: [
+        // {model: Location},
         {model: User}
       ],
     });
@@ -132,4 +133,5 @@ router.delete('/:id', async (req, res) => {
 
 
 module.exports = router;
+
 
