@@ -1,26 +1,36 @@
 {{!-- <dev>
 {{> loading}}
 </dev> --}}
+<style>
+.body{
+  background: url("./images/foliage3.33.jpg");
+}
+.column{
+  display: flex;
+  justify-content: center;
+  max-height: 8%;
+width:100%
+}
+.btn{
+background-color: rgb(19, 98, 19);
+}
 
-<!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <title>Available Books In Your Neighborhood</title>
-</head>
-<body>
-    <h1>Hi Neighbor!</h1>
+</style>
 
+<body class="body">
     <h2>Available Books In Our Neighborhood:</h2>
-    <section class="card">
- <ul>
-  <div class="row">
-    {{#each books}}
-        <div class="col-sm-4"> 
+    <section class="card mb-3" style="max-width: 540px;">
+    <ul>
+      <div class="row g-0">
+      {{#each books}}
+        <div class="column"> 
             <div id="book-{{id}}" class="card" style="width: 18rem;">
                 {{#if image}}
-                    <img src="{{image}}" class="card-img-top" alt="...">
+                    <img src="{{image}}" class="img-fluid rounded-start" alt="book image">
+    
                 {{/if}}
+                </div>
+                <div class="col-lg-8">
                 <div class="card-body">
                     <h5 class="card-title">{{title}}</h5>
                     <p class="card-text">Author: {{authors}}</p>
@@ -29,25 +39,15 @@
                     <button class="btn btn-primary add-to-library" data-book-id="{{id}}">Add to Library</button>
                 </div>
             </div>
+            </div>
         </div>
     {{/each}}
 </div>
 
 </ul>
 
-{{!-- <form id="searchForm">
-  <select id="searchType">
-    <option value="title">Title</option>
-    <option value="author">Author</option>
-  </select>
-  <input type="text" id="searchInput" placeholder="Search for a book..." />
-  <button type="submit">Search</button>
-</form>
-<div id="booksContainer"></div> --}}
-
-
-
 </section>
+</body>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
@@ -55,6 +55,6 @@
   <script src="/js/addToLibrary.js"></script>
   <script src="/js/searchBooks.js"></script>
 
-</body>
+
 
 </html>
