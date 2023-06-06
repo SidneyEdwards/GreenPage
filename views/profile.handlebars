@@ -30,7 +30,7 @@ background-color: rgb(19, 98, 19);
 
 <body class="body">
 <section class="card">
-      <div>
+<div>
         {{#each books}}
           <div class="col"> 
             <div id="book-{{id}}" class="card" style="width: 10rem;">
@@ -44,12 +44,13 @@ background-color: rgb(19, 98, 19);
                 <p class="card-text">Author: {{authors}}</p>
                 <p class="card-text">Genre: {{genre}}</p>
                 <p class="card-text">{{description}}</p>
-                <button class="btn btn-primary add-to-library" data-book-id="{{id}}">Add to Library</button>
+                <button class="btn btn-primary return-book" data-book-id="{{id}}">Return Book</button>
               </div>
             </div>
           </div>
         {{/each}}
 </div>
+
 </section>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
