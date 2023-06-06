@@ -1,14 +1,14 @@
 
-<form class="container mt-5">
     <h2>Want to Add Your Books to the Library?</h2>
-    <form id="searchForm"class="mt-3" style="display: none;">
+    <form id="searchForm">
   <select id="searchType">
     <option value="title">Title</option>
     <option value="author">Author</option>
-
   </select>
   <input type="text" id="searchInput" placeholder="Search for a book..." />
-  <div class="input-group-append">
   <button type="submit">Search</button>
 </form>
-</div>
+<div id="booksContainer"></div>
+
+<script src="/js/add.js" ></script>
+<script src="/js/searchBooks.js" ></script>
