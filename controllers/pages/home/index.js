@@ -4,12 +4,7 @@ const { Book, User } = require('../../../models');
 router.get('/', async (req, res) => {
   try {
     console.log('hit ------------')
-    const bookData = await Book.findAll({
-      include: [User],
-      where: {
-        available: true
-      }
-    });
+    const bookData = await Book.findAll({ include: [User] });
     const books = bookData.map((book) => book.get({ plain: true }));
 
     res.render('mainlibrary', {
@@ -21,6 +16,5 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
 
 module.exports = router;

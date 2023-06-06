@@ -59,6 +59,7 @@ function searchBooks() {
             authors: author.textContent.replace('Author: ', ''),
             genre: genre.textContent.replace('Genre: ', ''),
             description: description.textContent.replace('Description: ', ''),
+            image: book.image
           };
           addBookToLibrary(bookToSave);
         });
