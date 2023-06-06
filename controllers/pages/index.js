@@ -7,7 +7,7 @@ const home = require('./home');
 const add = require('./add');
 const login = require('./login');
 const signup = require('./signup');
-const nav = require('/nav');
+
 
 router.use('/profile', withAuth, profile);
 
