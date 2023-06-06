@@ -55,7 +55,7 @@ document.querySelectorAll('.add-to-library').forEach((button) => {
 document.querySelector("#searchForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
-  var searchInput = document.querySelector("#searchInput").value;
+  const searchInput = document.querySelector("#searchInput").value;
 
 
   fetch(`/api/search?q=${searchInput}`)
