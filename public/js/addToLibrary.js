@@ -1,28 +1,32 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-  if (event) {
-    console.info('DOM loaded');
-  }
+document.querySelectorAll('.add-to-library').forEach((button) => {
+  button.addEventListener('click', async function (e) {  // pass the event object to function
+    const bookId = this.getAttribute('data-book-id');
 
-  const addToLibraryBtn = document.querySelectorAll('.add-to-library');
-
-  if (addToLibraryBtn) {
-    addToLibraryBtn.forEach((button) => {
-      button.addEventListener('click', (e) => {
-        const bookId = e.target.getAttribute('data-book-id');
-
-        fetch(`/api/users/library/${bookId}`, {
-          method: 'POST',
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            console.log(data);
-            window.location.href = '/profile';
-          })
-          .catch((err) => console.error('Error:', err));
+    try {
+      const response = await fetch(`/api/users/library/${bookId}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
       });
-    });
-  }
+      
+      if (!response.ok) {
+        throw await response.json();
+      }
+      
+      const responseData = await response.json();
+      if (responseData.success) {
+        document.getElementById(`book-${bookId}`).remove();
+      } else {
+        console.error('Error adding book to library:', responseData.error);
+      }
+      e.target.closest('.col').remove();  
+    } catch (error) {
+      console.error(error);
+    }
+  });
 });
+
 
 document.querySelectorAll('.add-to-library').forEach((button) => {
   button.addEventListener('click', async function () {
@@ -35,17 +39,18 @@ document.querySelectorAll('.add-to-library').forEach((button) => {
           'Content-Type': 'application/json',
         },
       });
-
+      
       if (!response.ok) {
         throw await response.json();
       }
-
+      
       const responseData = await response.json();
       if (responseData.success) {
         document.getElementById(`book-${bookId}`).remove();
       } else {
         console.error('Error adding book to library:', responseData.error);
       }
+      e.target.closest('.col').remove(); 
     } catch (error) {
       console.error(error);
     }
