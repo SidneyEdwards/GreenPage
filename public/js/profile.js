@@ -8,7 +8,7 @@ document.querySelectorAll('.return-book').forEach((button) => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        e.target.closest('.card').remove(); 
+        e.target.closest('.col').remove(); 
       })
       .catch((error) => console.error('Error:', error));
   });
