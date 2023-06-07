@@ -9,16 +9,19 @@ This website is designed to allow members of the neighborhood to search for avai
 Long Yang (Tojicodes), Sidney Edwards (SidneyEdwards), David McDaniel (ActivePatience), Daniel Mascali(TurboTeam335)- With the gracious help of Caleb Crum.
 
 ## Features
-Google Books API, Github, Bootstrap, Unsplash.com
+Google Books API, Github, Bootstrap, Unsplash.com, Pixel, Heroku
 
 
-## Deployed
+## Deployed- Heroku
 
-https://sidneyedwards.github.io/GreenPage/
+(https://frozen-castle-12259.herokuapp.com/)
 
 ## Github Repo
 
 https://github.com/SidneyEdwards/GreenPage
 
-# Demo
+# Display
+
+![image](https://github.com/SidneyEdwards/GreenPage/assets/124628764/0aa8939e-edce-4d9b-a666-bb35cea20a86)
+
 
