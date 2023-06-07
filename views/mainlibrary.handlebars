@@ -6,9 +6,11 @@ justify-content: center;
 .col{
   display: flex;
   justify-content: center;
+  align-item: center;
   max-height: 8%;
   width:100%
 }
+
 .btn{
 background-color: rgb(19, 98, 19);
 }
@@ -18,8 +20,7 @@ background-color: rgb(19, 98, 19);
 
 <body class="body">
     <h2>Available Books In Our Neighborhood:</h2>
-    <section class="card mb-3" style="max-width: 100vw;">
-    {{!-- <ul> --}}
+    <section class="card" style="max-width: 100vw;">
       <div>
         {{#each books}}
           <div class="col"> 
